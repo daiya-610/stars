@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails',                   '6.0.3'
+gem 'mysql2',                  '>= 0.3.18', '< 0.5'
 gem 'bcrypt',                  '3.1.13'
 gem 'faker',                   '2.1.2'
 gem 'will_paginate',           '3.1.8'
@@ -18,8 +19,6 @@ group :development, :test do
   gem 'sqlite3', '1.4.1'
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
 end
-
-gem 'mysql2',
 
 group :development do
   gem 'web-console',           '4.0.1'
