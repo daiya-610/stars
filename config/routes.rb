@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  get 'static_pages/home'
+  # root -> ルートパス(localhost:3000)でアクセスした場合に割り当てられる設定で、Controllerファイルに記述するindexメソッドを実行するように定義
+  get 'posts', to: 'posts#index'
+
+  # 投稿ページを表示
+  get 'posts/new', to: 'posts#new'
 end
