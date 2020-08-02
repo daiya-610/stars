@@ -1,6 +1,6 @@
-<% provide(:title, "Home") %>
-<%= render 'layouts/header' %>
 <div class="container">
-<%= yield %>
-<%= render 'layouts/footer' %>
+  <div class="jumbotron">
+    <h1>ようこそstarsへ</h1>
+  <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
 </div>

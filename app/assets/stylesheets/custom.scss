@@ -70,10 +70,18 @@ footer {
 
 h1 {
   margin: 70px 0;
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 /* stars_logo */
-.image {
-  margin-top: 80px;
+.jumbotron {
+  width: 100%;
+  margin-top: 50px;
   text-align: center;
+  background-color: burlywood;
 }
