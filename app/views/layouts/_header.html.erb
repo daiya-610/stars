@@ -1,5 +1,5 @@
 <header class="navbar navbar-fixed-top">
-  <div class="container">
+  <div class="container", style="background-color: #8C5305;">
 
     <div class="navbar-header">
 
@@ -14,11 +14,25 @@
     </div>
 
     <nav>
-      <ul class="nav navbar-nav navbar-right navbar-collapse collapse">
-        <li class="text-light">
-          <%= link_to "Home", root_path, id: "navbar" %>
-        </li>
-        <li><%= link_to "Log in", '#', id: "navbar" %></li>
+      <ul class="nav navbar-nav navbar-expand-sm navbar-right navbar-collapse collapse">
+        <li><%= link_to "Home", root_path, id: "navbar" %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Users", '#' %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", login_path, id: "navbar" %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
