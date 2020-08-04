@@ -1,14 +1,21 @@
-<h1>ログイン</h1>
+<h1>メールアドレス:satou@email.com</h1>
+<br>
+<h2>パスワード：foobar</h2>
 
 <div class="log-form">
   <form>
     <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 <!-- sessionスコープは、例えば、ショッピングカード内容を保存したり、各ユーザーのログイン／ログアウト状態を記録したりするなど、いわゆるセッション情報を保持するために利用します。 -->
-      <%= f.label :email %>
+      <%= f.label :email, "メールアドレス" %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password %>
+      <%= f.label :password, "パスワード" %>
       <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>パスワードを記憶させますか？</span>
+      <% end %>
 
       <%= f.submit "ログイン", class: "btn btn-primary" %>
     <% end %>

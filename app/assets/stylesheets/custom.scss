@@ -227,17 +227,17 @@ transform: translate(0%,0%);
 
   .btn {
     display: inline-block;
-    background: blue;
+    background: lightskyblue;
     border: 1px solid blue;
     padding: .5em 2em;
     color: white;
     margin-right: .5em;
     box-shadow: inset 0px 1px 0px white; 
     &:hover {
-      background:blue;
+      background:lightblue;
     }
     &:active {
-      background: blue;
+      background: lightskyblue;
       box-shadow: inset 0px 1px 1px black; 
     }
     &:focus {
@@ -264,4 +264,13 @@ transform: translate(0%,0%);
   }
 }
 
+.checkbox span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
 /* login */
