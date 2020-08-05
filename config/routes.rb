@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # 投稿ページを表示
   get '/posts/new', to: 'posts#new'
   resources :users
+  resources :posts, only: [:create, :destroy]
 end
